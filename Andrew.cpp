@@ -1,11 +1,7 @@
 #include <iostream>
 #include <string>
 
-int main()
-{
-	std::string text;
-	std::getline(std::cin, text);
-
+bool palindrome(std::string text){
 	bool res = true;
 
 	for (int i = 0; i < text.size() / 2; i++) {
@@ -14,5 +10,14 @@ int main()
 			break;
 		}
 	}
-	std::cout << "This string is " << (res ? "" : "not ") << "a palindrome." << std::endl;
+
+	return res;
+}
+
+int main()
+{
+	std::string text;
+	std::getline(std::cin, text);
+
+	std::cout << "This string is " << (palindrome(text) ? "" : "not ") << "a palindrome." << std::endl;
 }
