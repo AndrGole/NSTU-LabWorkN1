@@ -5,7 +5,7 @@ void Task_2a()
 {
 	std::string stroka;
 	std::getline(std::cin, stroka);
-	std::string glas = ("aeiouAEIOU");
+	std::string glas = ("ayeiouAYEIOU");
 
 	int count = 0;
 
